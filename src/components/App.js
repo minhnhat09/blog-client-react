@@ -4,6 +4,7 @@ import { BrowserRouter, Route } from "react-router-dom";
 import Header from "./Header";
 import Landing from "./Landing";
 import DetailPost from "./DetailPost";
+import AddPost from "./AddPost";
 
 class App extends Component {
   render() {
@@ -12,9 +13,10 @@ class App extends Component {
         <BrowserRouter>
           <div>
             <Header />
-            <div className="container">
+            <div>
               <Route exact path="/" component={Landing} />
               <Route exact path="/post" component={DetailPost} />
+              <Route exact path="/addpost" component={AddPost} />
             </div>
           </div>
         </BrowserRouter>
